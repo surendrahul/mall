@@ -100,7 +100,7 @@ img{
     background-color: white;
     border: 2px dotted red;
     position: absolute;
-    top: 85%;
+    top: 81%;
     left: 5%;
     font-size: 40px;
     color: blue;
@@ -115,9 +115,9 @@ img{
     width: 88%;
     border: 11px dotted red;
     color: white;
-    font-size: 60px;
+    font-size: 27px;
     text-align: center;
-    opacity: 0;
+    display:none;
     position: absolute;
     top: 50%;
     right: 5%;
@@ -144,7 +144,7 @@ position: absolute;
 	height: 6%;
     width: 80%;
     text-align: center;
-    font-size: 60px;
+    font-size: 27px;
     position: absolute;
     left: 10%;
     bottom: 2%;
@@ -312,18 +312,18 @@ function openBox(obj,str){
 				//console.log("match found");
 				finalCount++;
 				if(finalCount==(noOfTiles)/2){
-					document.getElementById('box1').style.opacity=0;
-					document.getElementById('time').style.opacity=0;
-					document.getElementById('levelbox').style.opacity=0;
-					document.getElementById('result').style.opacity=1;
-					document.getElementById('restart').style.opacity=1;
+					document.getElementById('box1').style.display="none";
+					document.getElementById('time').style.display="none";
+					document.getElementById('levelbox').display="none";
+					document.getElementById('result').style.display="block";
+					document.getElementById('restart').style.display="block";
 					document.getElementById('result').innerHTML="time taken by u "+time+" sec.";
 				}
 				//console.log(finalCount);
 			}
 			else{
 				//lazy close
-				setTimeout(lazyClose,800);
+				setTimeout(lazyClose,500);
 				//console.log("match not found");
 			}
 		}
